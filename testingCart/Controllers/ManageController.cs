@@ -249,6 +249,42 @@ namespace aspCart.Web.Controllers
             }
             return View(messages);
         }
+        public IActionResult Message(Guid id)
+        {
+            if (id != null)
+            {
+                var messageEntity = _contactUsService.GetMessageById(id);
+                if (messageEntity != null)
+                {
+                    var model = _mapper.Map<ContactUsMessage, ContactUsMessageModel>(messageEntity);
+
+                    if (model.Read == false)
+                        _contactUsService.MarkAsRead(id);
+
+                    return View(model);
+                }
+            }
+
+            return RedirectToAction("List");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Send(string To, string Subject, string Reply)
+        {
+            var subject = "Re: " + Subject;
+            var message = new ContactUsMessage
+            {
+                Email = To,
+                Title = subject,
+                Message = Reply,
+                Read = false,
+                SendDate = DateTime.Now
+
+            };
+            _contactUsService.InsertMessage(message);
+
+            return RedirectToAction("List");
+        }
         #region Helpers
 
         private void AddErrors(IdentityResult result)

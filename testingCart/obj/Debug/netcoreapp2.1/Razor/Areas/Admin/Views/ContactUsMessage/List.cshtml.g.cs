@@ -117,7 +117,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n<div class=\"box box-primary\">\r\n    <div class=\"box-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                ");
             EndContext();
             BeginContext(593, 2194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba68c263997e42d79499edace5a0d1e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f9957970e8314932b1e8ab375f1aa53d", async() => {
                 BeginContext(681, 870, true);
                 WriteLiteral(@"
                     <table id=""dataTbl"" class=""table message-table"">

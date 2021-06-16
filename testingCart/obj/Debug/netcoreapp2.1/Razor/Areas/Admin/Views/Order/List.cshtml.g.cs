@@ -278,7 +278,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    <div class=\"input-group\">\r\n                                        ");
             EndContext();
             BeginContext(3006, 271, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04d5eb552fe74eb2afaee312eb3fbaa8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c919b6679ea9462b94a624b2c54aeb82", async() => {
                 BeginContext(3135, 138, true);
                 WriteLiteral("\r\n                                            <i class=\"fa fa-pencil-square-o\">&nbsp; Manage</i>\r\n                                        ");
                 EndContext();

@@ -128,7 +128,7 @@ using Microsoft.AspNetCore.Identity;
                 WriteLiteral("\r\n    <div class=\"input-group\">\r\n        ");
                 EndContext();
                 BeginContext(507, 142, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c776107ee9c4219b2bc4e5e7421f610", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43701c8fadcc4b1d8207738d05c38793", async() => {
                     BeginContext(598, 47, true);
                     WriteLiteral("<i class=\"fa fa-plus-square\"></i>&nbsp; Add new");
                     EndContext();
@@ -158,7 +158,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n<div class=\"box box-primary\">\r\n    <div class=\"box-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                ");
             EndContext();
             BeginContext(955, 3092, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f83f9905c3d4818bff6f4e3532e55e6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8b04143f6934e0ab6104f4f1f86edf8", async() => {
                 BeginContext(1034, 547, true);
                 WriteLiteral(@"
                     <table id=""dataTbl"" class=""table table-bordered table-hover"">
@@ -234,7 +234,7 @@ WriteAttributeValue("", 2123, product.MainImage, 2123, 18, false);
                 WriteLiteral("                                            ");
                 EndContext();
                 BeginContext(2346, 65, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1479a8438b5040ddb238f73fcc74a0fb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7f7f3ddf5b084ed6b80801ec4ff45e29", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -308,7 +308,7 @@ WriteAttributeValue("", 2123, product.MainImage, 2123, 18, false);
                 WriteLiteral("                                    </td>\r\n                                    <td>\r\n                                        <div class=\"input-group\">\r\n                                            ");
                 EndContext();
                 BeginContext(3516, 281, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4083bcf9e6e046f593490f152a874614", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "277dfd15fc6e4983860c9b34d041fb02", async() => {
                     BeginContext(3649, 144, true);
                     WriteLiteral("\r\n                                                <i class=\"fa fa-pencil-square-o\">&nbsp; Edit</i>\r\n                                            ");
                     EndContext();

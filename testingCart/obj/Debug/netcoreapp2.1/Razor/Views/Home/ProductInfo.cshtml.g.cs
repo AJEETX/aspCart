@@ -268,7 +268,7 @@ WriteAttributeValue("", 1189, img, 1189, 4, false);
             WriteLiteral(")</span>\r\n                <small>");
             EndContext();
             BeginContext(2720, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74252826e0ae49e99c39c61753adc649", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6eafa5187d94c20b7d306c05d2b6f17", async() => {
                 BeginContext(2776, 14, true);
                 WriteLiteral("write a review");
                 EndContext();
@@ -388,7 +388,7 @@ WriteAttributeValue("", 1189, img, 1189, 4, false);
             WriteLiteral("            ");
             EndContext();
             BeginContext(3535, 267, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc3395fb794743e6873c09c56e2b5bb6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a300d2b83a3f4bceaef3d69ed0ffd256", async() => {
                 BeginContext(3606, 38, true);
                 WriteLiteral("\r\n                <input type=\"hidden\"");
                 EndContext();

@@ -49,6 +49,18 @@
                     <li><a id="menu-sale-orders" asp-controller="Order" asp-action="List"><i class="fa fa-circle-o"></i><span>Orders</span></a></li>
                 </ul>
             </li>
+            <!-- customer tree bar -->
+            <li id="menu-customer" class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i> <span>Manager Customer</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a id="menu-customer-details" asp-controller="Manage" asp-action="Users"><i class="fa fa-circle-o"></i><span>Customer</span></a></li>
+                </ul>
+            </li>
             <!-- support bar -->
             <li id="menu-support" class="treeview">
                 <a href="#">

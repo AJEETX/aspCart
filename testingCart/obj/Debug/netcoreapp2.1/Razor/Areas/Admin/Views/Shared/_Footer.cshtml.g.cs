@@ -96,7 +96,7 @@ using Microsoft.AspNetCore.Identity;
     <strong>Copyright &copy; 2017 ");
             EndContext();
             BeginContext(272, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47d0c83b8e8745b58f76ff2125f4e752", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21ae6046180840c1a0ecfe7f4d21b741", async() => {
                 BeginContext(321, 7, true);
                 WriteLiteral("aspCart");
                 EndContext();

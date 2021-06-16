@@ -290,3 +290,9 @@ D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\testingCart.dll
 D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\testingCart.pdb
 D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\testingCart.genruntimeconfig.cache
 D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\testingCart.csproj.CopyComplete
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\ChangePassword.cshtml.g.cs
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\EditBillingAddress.cshtml.g.cs
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\Index.cshtml.g.cs
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\OrderHistory.cshtml.g.cs
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\OrderHistoryList.cshtml.g.cs
+D:\AJEET\github.com\aspCart\testingCart\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Manage\Users.cshtml.g.cs

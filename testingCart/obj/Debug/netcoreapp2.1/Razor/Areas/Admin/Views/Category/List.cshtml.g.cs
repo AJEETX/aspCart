@@ -125,7 +125,7 @@ using Microsoft.AspNetCore.Identity;
                 WriteLiteral("\r\n    <div class=\"input-group\">\r\n        ");
                 EndContext();
                 BeginContext(510, 143, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3763a2aefdb146e19a34437629d80beb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1776dd322ac94301a1dd7026c52d73a9", async() => {
                     BeginContext(602, 47, true);
                     WriteLiteral("<i class=\"fa fa-plus-square\"></i>&nbsp; Add new");
                     EndContext();
@@ -155,7 +155,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n<div class=\"box box-primary\">\r\n    <div class=\"box-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                ");
             EndContext();
             BeginContext(959, 2178, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ff0b14afcf64114a00128f088405236", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fcafe58dd5394ed5ad0774d4e15e19ff", async() => {
                 BeginContext(1039, 433, true);
                 WriteLiteral(@"
                     <table id=""dataTbl"" class=""table table-bordered"">
@@ -237,7 +237,7 @@ WriteAttributeValue("", 1744, category.Id, 1744, 12, false);
                 WriteLiteral("                                    </td>\r\n                                    <td>\r\n                                        <div class=\"input-group\">\r\n                                            ");
                 EndContext();
                 BeginContext(2603, 284, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1b4c07c7241421fa703e1cf29558453", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65dc7801f3ef4f4890a1470c4e6b241c", async() => {
                     BeginContext(2739, 144, true);
                     WriteLiteral("\r\n                                                <i class=\"fa fa-pencil-square-o\">&nbsp; Edit</i>\r\n                                            ");
                     EndContext();

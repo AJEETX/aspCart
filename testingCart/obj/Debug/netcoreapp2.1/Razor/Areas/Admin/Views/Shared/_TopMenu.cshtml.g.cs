@@ -105,7 +105,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n<header class=\"main-header\">\r\n    <!-- Logo -->\r\n    ");
             EndContext();
             BeginContext(143, 293, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f194489c53e42d3a2ea276d93020da1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "210e3a33b4714e6fbe592e01aab9d2c2", async() => {
                 BeginContext(205, 227, true);
                 WriteLiteral("\r\n        <!-- mini logo for sidebar mini 50x50 pixels -->\r\n        <span class=\"logo-mini\"><b>a</b>C</span>\r\n        <!-- logo for regular state and mobile devices -->\r\n        <span class=\"logo-lg\"><b>asp</b>Cart</span>\r\n    ");
                 EndContext();
@@ -158,7 +158,7 @@ using Microsoft.AspNetCore.Identity;
                                             ");
             EndContext();
             BeginContext(1837, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "41b81c66db394c8ca93e94fe4e48a738", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5e26111779f9415e84c3e9b007714f3f", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -267,7 +267,7 @@ using Microsoft.AspNetCore.Identity;
                         ");
             EndContext();
             BeginContext(6511, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "28d6044baabd4a15a97cc51edc58f2b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "bc9957df64694737b54649c9c0e4d9c7", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -297,7 +297,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("</span>\r\n                    </a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <!-- The user image in the menu -->\r\n                        <li class=\"user-header\">\r\n                            ");
             EndContext();
             BeginContext(7000, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d06e3ff387f5445dbc858999cf20bcbc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "caea0f008e394d61b524537f704dba09", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -334,7 +334,7 @@ using Microsoft.AspNetCore.Identity;
                                 ");
             EndContext();
             BeginContext(7486, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1233c88f95d24fbbb70d05f28a34136d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc4550e339e34eef8445e22aeb2721e4", async() => {
                 BeginContext(7570, 7, true);
                 WriteLiteral("Profile");
                 EndContext();
@@ -361,7 +361,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n                            </div>\r\n                            <div class=\"pull-right\">\r\n                                ");
             EndContext();
             BeginContext(7705, 280, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84f76d87040742a68f09fcac81bbb346", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de04ffe11b544249a601a47fe83e0bd7", async() => {
                 BeginContext(7803, 175, true);
                 WriteLiteral("\r\n                                    <a href=\"javascript:document.getElementById(\'logoutForm\').submit()\" class=\"btn btn-danger\">Sign out</a>\r\n                                ");
                 EndContext();

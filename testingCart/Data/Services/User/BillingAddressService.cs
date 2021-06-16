@@ -1,5 +1,6 @@
 ﻿using aspCart.Core.Domain.User;
 using aspCart.Core.Interface.Services.User;
+using aspCart.Infrastructure.EFModels;
 using aspCart.Infrastructure.EFRepository;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,12 @@ namespace aspCart.Infrastructure.Services.User
 
         #region Methods
 
+
+        public BillingAddress GetBillingAddressByEmail(string email)
+        {
+            return _context.BillingAddresses.Where(b => b.Email == email).FirstOrDefault();
+        }
+
         /// <summary>
         /// Get billing address by id
         /// </summary>
@@ -39,6 +46,16 @@ namespace aspCart.Infrastructure.Services.User
         public BillingAddress GetBillingAddressById(Guid id)
         {
             return _billingAddressRepository.FindByExpression(x => x.Id == id);
+        }
+
+        public IQueryable<BillingAddress> GetBillingAddresses()
+        {
+            return _billingAddressRepository.GetAll();
+        }
+
+        public IQueryable<ApplicationUser> GetUsers()
+        {
+            return _context.Users;
         }
 
         /// <summary>

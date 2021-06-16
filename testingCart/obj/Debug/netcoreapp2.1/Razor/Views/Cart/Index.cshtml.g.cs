@@ -104,7 +104,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("        ");
             EndContext();
             BeginContext(163, 4153, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "654797749ce044709441fabbeb4a4551", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2bf81e88e70d44e78c3f6c53863bfefb", async() => {
                 BeginContext(237, 364, true);
                 WriteLiteral(@"
             <table class=""table"">
@@ -180,7 +180,7 @@ WriteAttributeValue("", 1208, cartItem.Name, 1208, 14, false);
                 WriteLiteral("                                        ");
                 EndContext();
                 BeginContext(1388, 87, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b4e01c4cb83444bfa4bd82092ba22b33", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0b2b5a12632c47bf9cae64a60b04e9d4", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -383,7 +383,7 @@ WriteAttributeValue("", 2604, cartItem.Quantity, 2604, 18, false);
                             ");
                 EndContext();
                 BeginContext(4110, 83, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ac3f3471a4d4fc18336b6fde09af5e7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c2295e068924c8da9ae0b5e6d3d79ac", async() => {
                     BeginContext(4181, 8, true);
                     WriteLiteral("Checkout");
                     EndContext();

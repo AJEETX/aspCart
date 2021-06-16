@@ -175,7 +175,7 @@ WriteAttributeValue("", 875, product.Name, 875, 13, false);
             WriteLiteral("                                    ");
             EndContext();
             BeginContext(1038, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "206d543f5cc94bb38ea6e4743bb4d7ec", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "aea23d5096ea449c82e6eda8e1888af5", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -291,7 +291,7 @@ WriteAttributeValue("", 1387, product.Name, 1387, 13, false);
             WriteLiteral("                            </div>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            ");
             EndContext();
             BeginContext(2073, 717, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d49a2cc842cb4ec3b5cf9b9fbecb91d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca3e730a91074f94b2f40f8cae6d1df7", async() => {
                 BeginContext(2144, 54, true);
                 WriteLiteral("\r\n                                <input type=\"hidden\"");
                 EndContext();

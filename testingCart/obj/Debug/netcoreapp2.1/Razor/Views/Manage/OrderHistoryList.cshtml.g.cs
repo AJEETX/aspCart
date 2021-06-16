@@ -97,7 +97,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("        <h5>Order history <small>");
             EndContext();
             BeginContext(182, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08d8f7b907b84cb599f6b40040db2a71", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd65eec6553f4c3ea57380df1a856803", async() => {
                 BeginContext(260, 5, true);
                 WriteLiteral(" back");
                 EndContext();
@@ -131,7 +131,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("                    <li class=\"list-group-item\">\r\n                        Order ID: # ");
             EndContext();
             BeginContext(553, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2da717a6a2be4a82afb54223ab9d8c8c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19b6e10e5ce5474596e9b48e42eab779", async() => {
                 BeginContext(641, 17, false);
 #line 16 "D:\AJEET\github.com\aspCart\testingCart\Views\Manage\OrderHistoryList.cshtml"
                                                                                                                       Write(order.OrderNumber);

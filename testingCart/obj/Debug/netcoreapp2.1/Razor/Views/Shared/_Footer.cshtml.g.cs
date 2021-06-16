@@ -81,7 +81,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("<footer class=\"footer\">\r\n    <div class=\"container-fluid\">\r\n        <small class=\"text-muted\">\r\n            <a href=\"#\">About</a> /\r\n            ");
             EndContext();
             BeginContext(145, 75, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "838bee033ada4a1abf0702fc2f830c9f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ceaf0c739f41488cb9b82f7af250b0a4", async() => {
                 BeginContext(206, 10, true);
                 WriteLiteral("Contact us");
                 EndContext();

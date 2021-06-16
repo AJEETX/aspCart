@@ -11,7 +11,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav class="container navbar navbar-toggleable-md navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,7 +67,7 @@
             </div>
         </div>
     }
-    
+
     <br />
     <div class="container-fluid">
         @RenderBody()
@@ -75,6 +75,7 @@
 
     @await Html.PartialAsync("_Footer")
 
+    @RenderSection("menu", required: false)
     @RenderSection("scripts", required: false)
 </body>
 </html>

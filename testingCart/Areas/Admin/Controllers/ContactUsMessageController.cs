@@ -92,14 +92,28 @@ namespace aspCart.Web.Areas.Admin.Controllers
             var from = new EmailAddress("no-reply@aspcart.com", "aspcart no-reply");
             var to = new EmailAddress(To);
             var subject = "Re: " + Subject;
+            var message = new ContactUsMessage
+            {
+                Email = To,
+                Title = subject,
+                Message=Reply,
+                Read=false,
+                SendDate=DateTime.Now
 
-            SendMail(from, to, subject, Reply, Reply).Wait();
+            };
+            _contactUsService.InsertMessage(message);
+
             return RedirectToAction("List");
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
         // basic email sender
         static async Task SendMail(EmailAddress from, EmailAddress to, string subject, string plainTextContent, string htmlContent)
         {
+
             var apiKey = Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()

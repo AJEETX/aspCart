@@ -107,6 +107,11 @@ namespace aspCart.Infrastructure.Services.Messages
             _contactUsRepository.SaveChanges();
         }
 
+        public IList<ContactUsMessage> GetAllMessages(string email)
+        {
+            return _contactUsRepository.FindManyByExpression(users=>users.Email == email).OrderByDescending(x=>x.SendDate).ToList();
+        }
+
         #endregion
     }
 }

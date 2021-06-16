@@ -13,6 +13,7 @@ namespace aspCart.Core.Interface.Services.Messages
         /// </summary>
         /// <returns>List of ContactUsMessage entities</returns>
         IList<ContactUsMessage> GetAllMessages();
+        IList<ContactUsMessage> GetAllMessages(string email);
 
         /// <summary>
         /// Get ContactUsMessage using id

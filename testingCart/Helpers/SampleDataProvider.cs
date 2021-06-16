@@ -916,7 +916,8 @@ namespace aspCart.Web.Helpers
                 NormalizedEmail = configuration.GetValue<string>("AdminAccount:Email").ToUpper(),
                 EmailConfirmed = true,
                 LockoutEnabled = false,
-                SecurityStamp = Guid.NewGuid().ToString()
+                SecurityStamp = Guid.NewGuid().ToString(),
+                BillingAddressId= BillingAddressIds.Billing0.GetGuid()
             };
 
             var roleStore = new RoleStore<IdentityRole>(context);

@@ -15,6 +15,9 @@ using aspCart.Core.Interface.Services.Sale;
 using aspCart.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using aspCart.Core.Interface.Services.Messages;
+using aspCart.Web.Areas.Admin.Models.Support;
+using aspCart.Core.Domain.Messages;
 
 namespace aspCart.Web.Controllers
 {
@@ -28,11 +31,12 @@ namespace aspCart.Web.Controllers
         private readonly IOrderService _orderService;
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
-
+        private readonly IContactUsService _contactUsService;
         private ISession Session => _httpContextAccessor.HttpContext.Session;
 
         public ManageController(
             UserManager<ApplicationUser> userManager,
+            IContactUsService contactUsService,
             SignInManager<ApplicationUser> signInManager,
             IBillingAddressService billingAddressService,
             IHttpContextAccessor httpContextAccessor,
@@ -45,6 +49,7 @@ namespace aspCart.Web.Controllers
             _billingAddressService = billingAddressService;
             _httpContextAccessor = httpContextAccessor;
             _orderService = orderService;
+            _contactUsService = contactUsService;
             _logger = loggerFactory.CreateLogger<ManageController>();
             _mapper = mapper;
         }
@@ -229,7 +234,21 @@ namespace aspCart.Web.Controllers
 
             return View(orderModel);
         }
-
+        public IActionResult Email()
+        {
+            return RedirectToAction("List");
+        }
+        public async Task<IActionResult> List()
+        {
+            var user = await GetCurrentUserAsync();
+            var entities = _contactUsService.GetAllMessages(user.Email);
+            var messages = new List<ContactUsMessageModel>();
+            foreach (var entity in entities)
+            {
+                messages.Add(_mapper.Map<ContactUsMessage, ContactUsMessageModel>(entity));
+            }
+            return View(messages);
+        }
         #region Helpers
 
         private void AddErrors(IdentityResult result)

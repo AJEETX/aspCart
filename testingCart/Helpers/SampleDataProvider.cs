@@ -60,7 +60,7 @@ namespace aspCart.Web.Helpers
             [EnumGuid("8ed5b69b-b4b2-452d-25e0-08d483e4de1d")] Billing2
         }
         #endregion
-        
+
         #region OrderIds
         enum OrderIds
         {
@@ -72,6 +72,7 @@ namespace aspCart.Web.Helpers
         #region ProductIds
         enum ProductIds
         {
+            [EnumGuid("337acae3-7adf-4372-8619-1cc9345c61eb")] About,
             [EnumGuid("337acae3-7adf-4372-8619-1cc9345c61ea")] RogG7,
             [EnumGuid("c85f8f8b-3245-4be5-9fa7-96f1df2dbdc7")] AcerPredatorGx,
             [EnumGuid("9de9aad6-7dca-4861-842f-20021a2c5fa0")] AsusGtx1080tiFounder,
@@ -344,6 +345,59 @@ namespace aspCart.Web.Helpers
             // product
             var productList = new List<Product>
             {
+                #region About
+                new Product // about
+                {
+                    Id = ProductIds.About.GetGuid(),
+                    Name = "about",
+                    Description = "<strong>FEATURES AT-A-GLANCE</strong><hr /><ul><li>Latest-generation NVIDIA GTX 1080 8GB Graphics Card, Unlocked Intel Core i7-7820HK 2.9 GHz Processor (8M Cache, up to 3.9 GHz)</li><li>Overclocked 64GB DDR4 2800MHz RAM, 1TB NVMe PCIe SSD (512GB x2 RAID0), Windows 10 Pro, CM238 Express Chipset</li><li>17.3\u201D FHD 1920x1080 G-SYNC Display, 120Hz refresh rate, 178\u00B0 Viewing angles</li><li>1x HDMI 2.0 Port, 1x mini Displayport, 802.11ac WiFi 2x2, Bluetooth 4.1, 1x USB 3.1 Type C, 1x Thunderbolt Port (up to 20Gbit/s.), 1x RJ45 LAN Jack, 3x USB 3.0</li><li>Powerful battery rated 93WHrs, 6 cell Li-ion Battery Pack, ESS Sabre headphone DAC and amplifier, Anti-Ghosting (30-Key Rollover), ROG Macro Keys Illuminated Chiclet</li></ul><br /><strong>FEATURES</strong><hr /><h4><strong>OVERCLOCKING BEAST</strong></h4><br /><strong><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/5073c8af-dbbb-4f63-8e51-0207ba6d97bd.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />ROG G701VI OC Edition OC Edition is designed to be overclocked to maximum potential. It\u2019s equipped with an unlocked Intel Core i7-7820K processor.&nbsp;<br /><br />Overclock ROG G701 using ROG Gaming Center, providing access to three modes: Standard, Extreme, and Manual for quick and easy access to performance levels.<hr /><br /><strong>BLAZING FAST RAM, BLAZING FAST SSD<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/4dad08b7-ebca-4415-9029-7ed2f4e44b7d.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />Go beyond stock speeds. ROG G701 is equipped with 64GB of 2800MHz DDR4 Memory for superior application performance. It\u2019s paired with a next generation NVMe PCIe SSD, that supports theoretical speeds 4-times greater than SATA-based drives. This results in near-instant application launches and fast boot times.&nbsp;<hr /><br /><strong>120HZ WIDEVIEW PANEL WITH G-SYNC SUPPORT<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/e1a37c7e-cc94-40a2-96a3-2587bfe3c645.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />ROG G701 features a super-fast 120Hz panel that supports NVIDIA\u00AE G-SYNC\u2122 technology for fast-paced games. G-SYNC synchronizes the display's refresh rate to the GeForce graphics card to ensure super-smooth visuals. G-SYNC minimizes frame-rate stutter, and eliminates input lag and visual tearing. It delivers the smoothest and fastest gaming graphics \u2014 all without affecting system performance. See everything with accurate detail with the 178\u00B0 Viewing Angle IPS-Type panel.<hr /><br /><strong>VR READY<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/b3387c6e-9b96-4557-bd5a-961e3c62978e.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />GeForce GTX 10-series graphics cards are powered by Pascal to deliver up to 3x the performance of previous-generation graphics cards, plus innovative new gaming technologies and breakthrough VR experiences.&nbsp;<br /><br />Enjoy immersive virtual reality that is smooth, low-latency, and stutter-free with the G701VI OC Edition.<hr /><br /><strong>ANTI-GHOSTING KEYBOARD WITH 30-KEY ROLLOVER<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/292a14db-1d74-4cf9-96b5-019fd6101758.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />ROG G701 has an anti-ghosting keyboard with 30-key rollover technology so up to 30 keystrokes can be instantaneously and correctly logged, even when you hit several of them at once.&nbsp;<br /><br />Each key is ergonomically-designed to ensure solid and responsive keystrokes when typing or entering commands \u2013 making it easy for you to dominate the battlefield. And with a new Record key and more macro keys at your disposal, everything you need is at your fingertips.<hr /><br /><strong>ESS SABRE HEADPHONE DAC AND AMPLIFIER<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/66af7726-defd-4384-90b4-ac9ad4a3ce9a.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />ROG G701 features an ESS Sabre headphone DAC and amplifier to give you a sample rate eight times greater than CD-quality audio. The ESS Sabre headphone DAC improves sound quality to provide you with a high dynamic range (DNR) and less noise for rich 384Hz/32bit sound output. In-game audio sounds richer, with greater detail and less distortion, even when you're using a headset.<hr /><br /><strong>STREAMING FRIENDLY FEATURES<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/fd5da23f-88c8-48ca-81e2-4101b6b77733.jpg.w960.jpg\" style=\"height:320px; width:320px\" /></strong><br /><br />ROG G701 is designed to for optimal streaming performance while playing games due to its high end Core i7 Processor and GTX 1080 graphics. ROG G701 comes with a lifetime XSplit license. It has a dedicated recording key that lets you launch XSplit Gamecaster with just one click so you can record or broadcast your gaming session. XSplit Gamecaster allows you to easily stream or record gameplay via a convenient in-game overlay. Make in-game annotations to highlight what's happening onscreen. You can even interact with friends and fans by broadcasting on Twitch.<hr /><br /><strong>COOLING WITHOUT COMPROMISE<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/ece89df9-2ce3-4e8d-adff-cde0f0aba3bc.png.w960.png\" style=\"height:321px; width:320px\" /></strong><br /><br />ROG G701VI has a unique thermal design that directs dust into a dust-release tunnel to keep it away from internal components. This prolongs the component lifespan and enhances overall stability of the laptop by preventing dust from clogging the radiator and reducing cooling effectiveness. The G701VI has dedicated cooling modules for the CPU and GPU to effectively cool each component. In the cooling process, hot exhaust is efficiently managed and expelled through rear vents, directing heat away in order to provide a more comfortable gaming session.<hr /><br /><strong>ROG GAMING CENTER<br /><br /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-6f36d4a4-a37a-4a56-81e4-acfef128bc74/4b725c85-05ac-4b0d-b606-7935b98b734f.png.w960.png\" style=\"height:321px; width:320px\" /></strong><br /><br />The new ROG Gaming Center improves your gaming experience. This integrated control center provides access to Turbo Gear's three overclocking modes (Standard, Extreme and Manual) for quick and easy access to extreme performance levels. Extreme mode goes all in - letting you experience everything ROG G701VI has to offer with just one click. You also have the option to overclock manually, so you can unlock your own personal overclocking achievements!<hr /><br /><strong>ASUS ACCIDENTAL DAMAGE PROTECTION (ADP)</strong><hr /><strong>YOUR ALWAYS ON-CALL PC MEDICS</strong><br />One-year Accidental Damage Protection<br /><br />It's a fact -- accidents happen to all of us. ASUS ADP program1 is created to bring you peace of mind and help protect your devices against damages such as: liquid spills, electrical surges, and drops.<br /><br />*ASUS ADP program applies only to select ASUS branded notebook and tablet products sold within the United States and Canada from select Authorized ASUS Resellers. Products must be purchased in brand new factory sealed condition and not of refurbished or open-box condition. Units sold and purchased outside of the United States and Canada are not eligible.For more details and a list of excluded Resellers, please visit http://adp.asus.com.<br /><br /><strong>WHAT'S IN THE BOX</strong><hr /><ul><li>ASUS ROG G701VI Laptop</li><li>AC Adapter</li><li>User Manual</li><li>Warranty Card</li></ul><br /><strong>ROG 10TH</strong><hr /><img alt=\"\" src=\"https://smedia.webcollage.net/rwvfp/wc/cp/23137514/module/asus/_cp/products/1485198472421/tab-f7be1a10-2dbb-474c-ac59-9482c7ebbcf7/a5df2b68-aade-4c77-b750-d8ea0fb3537e.png.w960.png\" style=\"height:221px; width:234px\" /><br />Now in its 10th year, ROG celebrates the ever-evolving collaboration between world-class R&amp;D, insatiable enthusiasts and devoted gamers needed to embrace (and tame) the bleeding edge and is ready to keep outrunning technology for ten more.",
+                    Price = 3499m,
+                    SpecialPrice =  2624.99m,
+                    SpecialPriceStartDate = DateTime.Now,
+                    SpecialPriceEndDate = DateTime.Now.AddDays(30),
+                    StockQuantity = 1000,
+                    NotifyForQuantityBelow = 1,
+                    MinimumCartQuantity = 1,
+                    MaximumCartQuantity = 1000,
+                    SeoUrl = "about",
+                    Published = true,
+                    DateAdded = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    Categories = new List<ProductCategoryMapping>
+                    {
+                        new ProductCategoryMapping { ProductId = ProductIds.RogG7.GetGuid(), CategoryId = CategoryIds.Laptop.GetGuid() }
+                    },
+                    Manufacturers = new List<ProductManufacturerMapping>
+                    {
+                        new ProductManufacturerMapping { ProductId = ProductIds.RogG7.GetGuid(), ManufacturerId = ManufacturerIds.Asus.GetGuid() }
+                    },
+                    Images = new List<ProductImageMapping>
+                    {
+                        new ProductImageMapping { ProductId = ProductIds.About.GetGuid(), ImageId = ImageIds.RogG7Front.GetGuid(), SortOrder = 0, Position = 0 },
+                        new ProductImageMapping { ProductId = ProductIds.About.GetGuid(), ImageId = ImageIds.RogG7Back.GetGuid(), SortOrder = 0, Position = 1 }
+                    },
+                    Specifications = new List<ProductSpecificationMapping>
+                    {
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Processor.GetGuid(), Value = "Intel® Core™ i7 7820HK Processor", SortOrder = 0, Position = 0 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Operating.GetGuid(), Value = "Windows 10 Home", SortOrder = 0, Position = 1 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Chipset.GetGuid(), Value = "Intel® CM238 Express Chipset", SortOrder = 0, Position = 2 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Memory.GetGuid(), Value = "DDR4 2400MHz SDRAM, up to 64 GB SDRAM ( Overclocking to 2800MHz Supported )", SortOrder = 0, Position = 3 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Display.GetGuid(), Value = "17.3&quot; (16:9) LED backlit FHD (1920x1080) 120Hz Anti-Glare Panel with 72% NTSC&amp;nbsp;&lt;br /&gt;17.3&quot; (16:9) LED backlit UHD (3840x2160) 60Hz Anti-Glare Panel with 100% NTSC&amp;nbsp;&lt;br /&gt;With WideView Technology", SortOrder = 0, Position = 4 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Graphic.GetGuid(), Value = "NVIDIA GeForce GTX 1080", SortOrder = 0, Position = 5 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Storage.GetGuid(), Value = "<strong>Solid State Drives:</strong><br />256GB/512GB PCIE Gen3X4 SSD RAID 0 Support", SortOrder = 0, Position = 6 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Keyboard.GetGuid(), Value = "Chicklet keyboard with isolated Num key", SortOrder = 0, Position = 7 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.WebCam.GetGuid(), Value = "HD Web Camera", SortOrder = 0, Position = 8 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Networking.GetGuid(), Value = "<strong>Wi-Fi</strong><br />Integrated 802.11 AC", SortOrder = 0, Position = 9 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Interface.GetGuid(), Value = "1 x Microphone-in jack<br />1 x Headphone-out jack&nbsp;<br />2 x Type A USB3.0 (USB3.1 GEN1)&nbsp;<br />3 x Type A USB3.0 (USB3.1 GEN1)&nbsp;<br />1 x HDMI&nbsp;<br />1 x mini Display Port&nbsp;", SortOrder = 0, Position = 10 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Battery.GetGuid(), Value = "6 Cells 93 Whrs Battery", SortOrder = 0, Position = 11 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Dimensions.GetGuid(), Value = "429 x 309 x 44 mm (WxDxH)", SortOrder = 0, Position = 12 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.Weight.GetGuid(), Value = "with Battery", SortOrder = 0, Position = 13 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.VR.GetGuid(), Value = "VR Ready", SortOrder = 0, Position = 14 },
+                        new ProductSpecificationMapping { ProductId = ProductIds.RogG7.GetGuid(), SpecificationId = SpecificationIds.GamingSeries.GetGuid(), Value = "G Series", SortOrder = 0, Position = 15 }
+                    }
+                },
+                #endregion
+
                 #region rog g7
                 new Product // rog g7
                 {
@@ -917,7 +971,7 @@ namespace aspCart.Web.Helpers
                 EmailConfirmed = true,
                 LockoutEnabled = false,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                BillingAddressId= BillingAddressIds.Billing0.GetGuid()
+                BillingAddressId = BillingAddressIds.Billing0.GetGuid()
             };
 
             var roleStore = new RoleStore<IdentityRole>(context);

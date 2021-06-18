@@ -3,7 +3,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@{ 
+@{
     string _cartItemsCountSessionKey = "CartItemsCount";
 }
 
@@ -41,7 +41,33 @@ else
 {
     <ul class="navbar-nav justify-content-end">
         <li class="nav-item"><div class="dropdown-divider dd-mobile"></div></li>
-        <li class="nav-item">
+        <li class="nav-item ">
+            <a asp-area="" asp-controller="Cart" asp-action="Index" class="nav-link mx-1 my-1">
+                <i class="fa fa-shopping-cart"></i>
+                @if (Context.Session.GetString(_cartItemsCountSessionKey) != null && Context.Session.GetInt32(_cartItemsCountSessionKey) != 0)
+                {
+                    @:Cart (@Context.Session.GetInt32(_cartItemsCountSessionKey).ToString())
+                }
+                else
+                {
+                    @:Cart
+                }
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle my-1" href="#" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+
+                <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-outline-primary navbar-btn mx-1 my-1">Log in</a>
+                <a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-secondary navbar-btn mx-1 my-1">Register</a>
+
+            </div>
+        </li>
+
+
+        @*<li class="nav-item">
             <a asp-area="" asp-controller="Cart" asp-action="Index" class="nav-link mx-1 my-1">
                 <i class="fa fa-shopping-cart"></i>
                 @if (Context.Session.GetString(_cartItemsCountSessionKey) != null && Context.Session.GetInt32(_cartItemsCountSessionKey) != 0)
@@ -59,7 +85,7 @@ else
         </li>
         <li class="nav-item">
             <a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-secondary navbar-btn mx-1 my-1">Register</a>
-        </li>
+        </li>*@
         @*<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account

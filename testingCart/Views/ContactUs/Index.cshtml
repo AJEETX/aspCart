@@ -3,8 +3,19 @@
     ViewData["Title"] = "Contact us";
     ViewData["Contact"] = "Contact";
 }
-
+<style>
+    .breadcrumb li {
+        display: inline;
+    }
+</style>
 <div class="container">
+    <section class=" content-wrapper content-header">
+        <ol class=" breadcrumb">
+            <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <li class="active"> Contact</li>
+        </ol>
+    </section>
     <div class="row">
         <div class="col-sm-12 col-md-7 col-lg-6">
             @if (TempData["ContactUsErr"] != null && (bool)TempData["ContactUsErr"])

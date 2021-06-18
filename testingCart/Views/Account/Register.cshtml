@@ -4,7 +4,13 @@
 }
 
 <div class="container">
-    <h2>@ViewData["Title"]</h2>
+    <section class=" content-wrapper content-header">
+        <ol class=" breadcrumb">
+            <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <li class="active"> Register</li>
+        </ol>
+    </section>
     <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
         <h4>Create a new account</h4>
         <hr />

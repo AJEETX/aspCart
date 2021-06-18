@@ -86,7 +86,7 @@ namespace aspCart.Web.Controllers
                 productList.Add(productModel);
             }
 
-            return View(productList);
+            return View(productList.Take(8));
         }
 
         // GET: /Home/ProductInfo ?? /Product/{seo}

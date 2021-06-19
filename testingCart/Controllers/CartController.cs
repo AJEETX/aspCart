@@ -15,6 +15,8 @@ using AutoMapper;
 using aspCart.Infrastructure.EFModels;
 using Microsoft.AspNetCore.Identity;
 using aspCart.Core.Domain.Sale;
+using aspCart.Core.Interface.Services.Messages;
+using aspCart.Core.Domain.Messages;
 
 namespace aspCart.Web.Controllers
 {
@@ -28,6 +30,7 @@ namespace aspCart.Web.Controllers
         private readonly IOrderService _orderService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMapper _mapper;
+        private readonly IContactUsService _contactService;
 
         private ISession Session => _httpContextAccessor.HttpContext.Session;
         private readonly string _cartItesmSessionKey = "CartItems";
@@ -43,6 +46,7 @@ namespace aspCart.Web.Controllers
             IBillingAddressService billingAddressService,
             IOrderService orderService,
             IHttpContextAccessor httpContextAccessor,
+            IContactUsService contactService,
             IMapper mapper)
         {
             _userManager = userManager;
@@ -50,6 +54,7 @@ namespace aspCart.Web.Controllers
             _billingAddressService = billingAddressService;
             _orderService = orderService;
             _mapper = mapper;
+            _contactService = contactService;
             _httpContextAccessor = httpContextAccessor;
         }
 
@@ -73,12 +78,12 @@ namespace aspCart.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Add(Guid id)
         {
-            if(id == null)
+            if (id == null)
                 return RedirectToAction("Index");
 
             // check if product exist
             var selectedItem = _productService.GetProductById(id);
-            if(selectedItem == null)
+            if (selectedItem == null)
                 return RedirectToAction("Index");
 
             // check if there are already cart instance
@@ -148,7 +153,7 @@ namespace aspCart.Web.Controllers
                 {
                     // check if id is valid
                     var item = _productService.GetProductById(id);
-                    if(item != null)
+                    if (item != null)
                     {
                         var newCartItem = new CartItemModel
                         {
@@ -183,7 +188,7 @@ namespace aspCart.Web.Controllers
             }
 
             // add or remove sesion
-            if(cartItems.Count > 0)
+            if (cartItems.Count > 0)
             {
                 Session.SetString(_cartItesmSessionKey, JsonConvert.SerializeObject(cartItems));
                 Session.SetInt32(_cartItemsCountSessionKey, cartItems.Count());
@@ -246,10 +251,10 @@ namespace aspCart.Web.Controllers
             if (Session.GetString(_cartItesmSessionKey) != null)
                 cartItems = JsonConvert.DeserializeObject<List<CartItemModel>>(Session.GetString(_cartItesmSessionKey));
 
-            foreach(var item in cartItems)
+            foreach (var item in cartItems)
             {
                 var currentItem = _productService.GetProductById(item.Id);
-                if(currentItem != null)
+                if (currentItem != null)
                 {
                     var newOrderItem = new OrderItem
                     {
@@ -281,6 +286,28 @@ namespace aspCart.Web.Controllers
                 // save
                 _orderService.InsertOrder(orderEntity);
 
+                var message = new ContactUsMessage
+                {
+                    Email = billingAddressEntity.Email,
+                    Name = billingAddressEntity.FirstName + billingAddressEntity.LastName,
+                    Title = "DotnetShop: " + billingAddressEntity.FirstName + "Order placed successfully. Order : " + totalOrderPrice,
+                    Message = "DotnetShop: " + billingAddressEntity.FirstName + "Order placed successfully. Order : " + totalOrderPrice,
+                    Read = false,
+                    SendDate = DateTime.Now
+                };
+                _contactService.InsertMessage(message);
+
+                var message2Admin = new ContactUsMessage
+                {
+                    Email = "admin@aspcart.com",
+                    Name = billingAddressEntity.FirstName + billingAddressEntity.LastName,
+                    Title = "DotnetShop: " + billingAddressEntity.FirstName + "Order placed successfully. Order : " + totalOrderPrice,
+                    Message = "DotnetShop: Admin" + "Order placed successfully. Order : " + totalOrderPrice,
+                    Read = false,
+                    SendDate = DateTime.Now
+                };
+                _contactService.InsertMessage(message2Admin);
+
                 // clear cart session
                 Session.Remove(_cartItesmSessionKey);
                 Session.Remove(_cartItemsCountSessionKey);
@@ -303,7 +330,7 @@ namespace aspCart.Web.Controllers
             string orderNumber = rand.Next(100, 999) + "-" + rand.Next(100, 999) + "-" + rand.Next(100000, 999999);
 
             var orderId = _orderService.GetOrderByOrderId(orderNumber);
-            
+
             while (orderId != null)
             {
                 orderNumber = rand.Next(100, 999) + "-" + rand.Next(100, 999) + "-" + rand.Next(100000, 999999);

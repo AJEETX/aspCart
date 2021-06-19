@@ -15,6 +15,9 @@ using aspCart.Core.Interface.Services.Sale;
 using aspCart.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using aspCart.Core.Interface.Services.Messages;
+using aspCart.Web.Areas.Admin.Models.Support;
+using aspCart.Core.Domain.Messages;
 
 namespace aspCart.Web.Areas.Admin.Controllers
 {
@@ -28,6 +31,7 @@ namespace aspCart.Web.Areas.Admin.Controllers
         private readonly IOrderService _orderService;
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
+        private readonly IContactUsService _contactUsService;
 
         private ISession Session => _httpContextAccessor.HttpContext.Session;
 
@@ -38,6 +42,7 @@ namespace aspCart.Web.Areas.Admin.Controllers
             IHttpContextAccessor httpContextAccessor,
             IOrderService orderService,
             ILoggerFactory loggerFactory,
+            IContactUsService contactUsService,
             IMapper mapper)
         {
             _userManager = userManager;
@@ -45,6 +50,7 @@ namespace aspCart.Web.Areas.Admin.Controllers
             _billingAddressService = billingAddressService;
             _httpContextAccessor = httpContextAccessor;
             _orderService = orderService;
+            _contactUsService = contactUsService;
             _logger = loggerFactory.CreateLogger<ManageController>();
             _mapper = mapper;
         }
@@ -132,7 +138,9 @@ namespace aspCart.Web.Areas.Admin.Controllers
         {
             if (Session.GetString("BillingAddress") != null)
             {
-                return Json(JsonConvert.DeserializeObject<BillingAddress>(Session.GetString("BillingAddress")));
+                var userBilling= JsonConvert.DeserializeObject<BillingAddress>(Session.GetString("BillingAddress"));
+                var userBillingModel = _mapper.Map<BillingAddress, BillingAddressModel>(userBilling);
+                return View(userBillingModel);
             }
 
             var user = await GetCurrentUserAsync();
@@ -252,7 +260,21 @@ namespace aspCart.Web.Areas.Admin.Controllers
 
             return View(orderModel);
         }
-
+        public IActionResult Email()
+        {
+            return RedirectToAction("List");
+        }
+        public async Task<IActionResult> List()
+        {
+            var user = await GetCurrentUserAsync();
+            var entities = _contactUsService.GetAllMessages(user.Email);
+            var messages = new List<ContactUsMessageModel>();
+            foreach (var entity in entities)
+            {
+                messages.Add(_mapper.Map<ContactUsMessage, ContactUsMessageModel>(entity));
+            }
+            return View(messages);
+        }
         #region Helpers
 
         private void AddErrors(IdentityResult result)

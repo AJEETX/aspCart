@@ -7,7 +7,7 @@
 </form>
 
 <!-- Modal -->
-<div class="modal fade" id="imageManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal" id="imageManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -162,7 +162,7 @@
             var fileUpload = $('#fileInput').get(0);
             var files = fileUpload.files;
             var form = ('#imageUploadForm');
-            var fileData = new FormData(form[0]);
+            var fileData = new FormData();
             var ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
 
             // build the FormData

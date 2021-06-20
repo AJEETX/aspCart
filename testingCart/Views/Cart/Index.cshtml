@@ -7,8 +7,8 @@
     <section class=" content-wrapper content-header">
         <ol class=" breadcrumb">
             <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <li class="active"> Cart</li>
+            
+            <li class="active"><i class="fa fa-angle-right" aria-hidden="true"></i> Cart</li>
         </ol>
     </section>
     @if (Model != null && Model.Count() > 0)
@@ -99,27 +99,4 @@
     @section Scripts {
         @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
     }
-
-    <script>
-        $(function () {
-            $('#save').on('click', function (e) {
-                e.preventDefault();
-
-                var result = $('#cartForm').valid();
-
-                if (result != 0) {
-                    $('input.cart-quantity-input').each(function () {
-                        var input = $(this);
-                        input.attr('name', "quantity");
-                    });
-
-                    $('#cartForm').submit();
-                }
-            });
-
-            $('.remove').on('click', function () {
-                var tr = $(this).parent().parent().remove();
-            });
-        });
-    </script>
 </div>

@@ -95,7 +95,6 @@ namespace aspCart.Web
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(60);
-                options.CookieName = "aspCart";
             });
 
 

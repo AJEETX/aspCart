@@ -81,6 +81,7 @@ namespace aspCart.Web
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
             // configure admin account injectable
@@ -118,7 +119,7 @@ namespace aspCart.Web
             services.AddSingleton(sp => MapperConfiguration.CreateMapper());
             services.AddSingleton<ViewHelper>();
             services.AddSingleton<DataHelper>();
-            services.AddSingleton<IFileProvider>(HostingEnvironment.ContentRootFileProvider);
+            services.AddSingleton(HostingEnvironment.ContentRootFileProvider);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

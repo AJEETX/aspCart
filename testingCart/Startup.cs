@@ -81,7 +81,6 @@ namespace aspCart.Web
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
             // configure admin account injectable
